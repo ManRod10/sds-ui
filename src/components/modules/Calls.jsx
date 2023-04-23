@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import {TwitterTweetEmbed} from 'react-twitter-embed';
 
 /* Components */
 import CallsTableMin from '../CallsTableMin';
@@ -43,14 +44,11 @@ const Calls = ({ core }) => {
           src={logo_sds_color}
           alt="Logotipo Secretaría de Salud de Bogotá"
         />
-        <iframe
-          id="SecSalud__frame"
-          title="Convocatoria Secretaría Distrital de Salud"
-          width="100%"
-          height="500"
-          src="https://covid19.saludcapital.gov.co/convocatoria"
-          sandbox=""
+        <div style={{display: 'flex', justifyContent: 'center', alignItems:'center'}}>
+        <TwitterTweetEmbed
+          tweetId={'1638254153192591361'} 
         />
+        </div>
         <Divider />
         <Title className="bold" level={3}>
           NIH Grants & Funding
