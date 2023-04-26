@@ -20,15 +20,6 @@ import ukri from '../../media/UKRI.svg';
 /* UI library Sub-components */
 const { Title } = Typography;
 
-function Tweet() {
-  const options = { width: 300 ,  height: 700};
-  return (
-    <div style={{ display: 'flex', justifyContent: 'center'  }}>
-      <TwitterTweetEmbed tweetId='1638254153192591361' options={options} />
-    </div>
-  );
-}
-
 const Calls = ({ core }) => {
   useEffect(() => {
     document.title = 'Convocatorias | SALUDATA';
@@ -53,7 +44,9 @@ const Calls = ({ core }) => {
           src={logo_sds_color}
           alt="Logotipo Secretaría de Salud de Bogotá"
         />
-        {Tweet()}
+        <div className="tweet-wrapper">
+        <TwitterTweetEmbed tweetId={"1638254153192591361"} />
+        </div>
         <Divider />
         <Title className="bold" level={3}>
           NIH Grants & Funding
